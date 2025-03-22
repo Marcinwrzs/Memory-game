@@ -1,0 +1,11 @@
+@use "./variables" as *;
+
+.game-board {
+  width: 90vw;
+  max-width: 492px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}

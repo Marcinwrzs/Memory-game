@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+.game-panel {
+  width: 95vw;
+  height: 100px;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3vh 0 20px 0;
+
+  &-item {
+    height: 50px;
+    width: 80px;
+    border: 1px solid $border-color;
+    background-color: $game-panel-item-background-color;
+    border-radius: $border-radius;
+    text-align: center;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

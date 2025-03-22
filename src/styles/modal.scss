@@ -1,0 +1,76 @@
+@use "./variables" as *;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $modal-overlay-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  .modal {
+    background: $modal-background-color;
+    z-index: 99999;
+    padding: 20px;
+    border-radius: $border-radius;
+    text-align: center;
+    border: 1px solid $border-color;
+    width: 95%;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media (max-width: 420px) {
+      max-width: 365px;
+    }
+
+    .table-container {
+      display: flex;
+      flex-direction: column;
+
+      & .table {
+        min-height: 322px;
+      }
+
+      @media (max-width: 459px) {
+        & .table {
+          min-height: 421px;
+        }
+      }
+      @media (max-height: 420px) {
+        & .table {
+          min-height: 200px;
+        }
+      }
+    }
+
+    .pagination-wrapper {
+      align-self: "start";
+      margin-top: auto;
+      width: 100%;
+    }
+  }
+
+  .modal .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+  @media screen and (max-height: 420px) {
+    .statistics-modal {
+      height: 310px !important;
+    }
+
+    .table-container {
+      min-height: 200px !important;
+    }
+  }
+}
